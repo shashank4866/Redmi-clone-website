@@ -10,7 +10,7 @@
        nav{
         height:60px;
         background-color: #ffffff;
-        /* box-shadow: 0px 0px 4px 3px rgb(237, 232, 232); */
+        /* box-shadow: 0px 0px 4px 3px rgb(127, 94, 94); */
         /* position: sticky;
         top: 1px; */
         
@@ -200,6 +200,18 @@
           font-size: 13px;
           margin-top: 20px;
         }
+
+
+        /* blure making */
+        .blure{
+          background-color:transparent;
+          backdrop-filter: blur(40px);
+          height: 300px;
+          width: 99vw; 
+          top: 380px; 
+          position: absolute;
+        }
+
         .TvSmartHome-container{
           /* background-color: yellowgreen; */
           width: 100vw;
@@ -260,7 +272,7 @@
        .main-header-container{
         height: 57px;
         width: 99vw;
-        background-color:white;
+        background-color:#f9f4f4;
         display: flex;
         gap:700px;
         align-items: center;
@@ -472,9 +484,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  gap: 20px;
-  top: 70px;
+  /* position: relative; */
+  /* gap: 20px;
+  top: 70px; */
 }
 
 #vedio-one{
@@ -634,11 +646,39 @@ top: 300px; */
   display: flex;
   height: 225px;
   position: relative;
+  /* overflow-x: scroll; */
+  overflow-x: hidden;
   gap: 50px;
   width: 99vw;
   /* border: 2px solid white; */
+ 
+  
+}
+.slider-childone{
+  animation: anim2;
+  animation-duration: 15s;
+  animation-timing-function: linear ;
+  animation-iteration-count: infinite;
   align-items: center;
   justify-content: center;
+}
+@keyframes anim2{
+  0%{
+    transform: translateX(-10px);
+
+  }
+  25%{
+    transform: translateX(-500px);
+  }
+  50%{
+    transform: translateX(-700px);
+  }
+  75%{
+    transform: translateX(-1000px);
+  }
+  100%{
+    transform: translateX();
+  }
 }
 .slider div{
   position: absolute;
@@ -647,36 +687,39 @@ top: 300px; */
   left: 0px;
 }
 .slider div:nth-child(2){
-  left: 230px;
+  left: 250px;
 }
 .slider div:nth-child(3){
-  left: 460px;
+  left: 480px;
 }
 .slider div:nth-child(4){
-  left: 690px;
+  left: 720px;
 }
 .slider div:nth-child(5){
-  left: 910px;
+  left: 950px;
 }
 
 .slider div:nth-child(6){
-  left: 1120px;
+  left: 1170px;
 }
 .slider div:nth-child(7){
-  left: 1330px;
+  left: 1410px;
 }
 .slider div:nth-child(8){
-  left: 1530px;
+  left: 1640px;
 }
 .slider div:nth-child(9){
-  left: 1730px;
+  left: 1870px;
+}
+.slider div:nth-child(10){
+  left: 2110px;
 }
 
 footer{
   background-color: #191919;
   color: white;
   display: flex;
-  gap: 120px;
+  gap: 80px;
   padding: 50px;
 }
 .list-footer{
@@ -712,3 +755,82 @@ footer{
 .footer-last a:hover{
 text-decoration: underline;
 }
+
+
+
+
+/* / */
+
+
+/* Responsive Styles for Mobile Devices */
+/* @media (max-width: 768px) { */
+  /* Navigation Fixes */
+  /* #main-navcontaine {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+  }
+  .navlinkcontainerleft, .navlinkcontainerright {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+  }
+  .navlinksleft, .navlinksright {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+  } */
+
+  /* Header Fixes */
+  /* .main-header-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      padding: 10px;
+  } */
+
+  /* Adjust Product Layout */
+  /* .phone-artical {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+  .phone-container {
+      width: 100%;
+  } */
+
+  /* Make Images Responsive */
+  /* img {
+      max-width: 100%;
+      height: auto;
+  } */
+
+  /* Fix Text Sizes */
+  /* body {
+      font-size: 14px;
+  }
+
+  .navlinks > a {
+      font-size: 16px;
+  } */
+
+  /* Improve Button Layout */
+  /* .btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      text-align: center;
+  } */
+
+  /* Fix Footer Layout */
+  /* footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+  .list-footer {
+      margin-left: 0;
+      padding: 10px;
+  }
+} */
